@@ -25,6 +25,7 @@ fetch_nginx_tarball() {
     fi
 }
 
+set
 mkdir -p $build_dir/bin
 $(fetch_nginx_tarball) | tar xzC $build_dir/bin
 nginx_version=$($build_dir/bin/nginx-$STACK -V 2>&1 | head -1 | awk '{ print $NF }')
@@ -36,4 +37,5 @@ cp $bp_dir/scripts/config/templates/mime.types $build_dir/config
 
 mkdir -p $build_dir/logs
 
+set
 exit 0
