@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 # bin/compile <build-dir> <cache-dir> <env-dir>
 
-set -e
+set -o errtrace
+set -o verbose
+set -o xtrace
 
 build_dir=$1
 cache_dir=$2
