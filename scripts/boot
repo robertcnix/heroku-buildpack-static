@@ -1,5 +1,9 @@
 #!/bin/bash -e
 
+set -o errtrace
+set -o verbose
+set -o xtrace
+
 set -o pipefail
 
 HERE=$(dirname "$0")
